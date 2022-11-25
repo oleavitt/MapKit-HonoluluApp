@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     mapView.delegate = self
     mapView.centerToLocation(initialLocation)
     mapView.constrainCamera(oahuCenter, latitudinalMeters: 50000, longitudinalMeters: 60000, maxZoomRange: 200000)
-    mapView.register(ArtworkMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+    mapView.register(ArtworkView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     loadInitialData()
     mapView.addAnnotations(artworks)
   }

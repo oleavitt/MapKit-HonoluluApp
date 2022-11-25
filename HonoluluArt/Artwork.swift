@@ -88,4 +88,14 @@ class Artwork: NSObject, MKAnnotation {
     default: return .green
     }
   }
+  
+  var image: UIImage {
+    switch discipline {
+    case "Monument": return #imageLiteral(resourceName: "Monument")
+    case "Mural": return #imageLiteral(resourceName: "Mural")
+    case "Plaque": return #imageLiteral(resourceName: "Plaque")
+    case "Sculpture": return #imageLiteral(resourceName: "Sculpture")
+    default: return #imageLiteral(resourceName: "Flag")
+    }
+  }
 }
